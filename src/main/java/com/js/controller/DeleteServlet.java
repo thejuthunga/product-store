@@ -17,6 +17,7 @@ public class DeleteServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int id=Integer.parseInt(req.getParameter("id"));
 		System.out.println(id);
+		
 		ProductCRUD pc= new ProductCRUD();
 		int res=pc.deleteProductById(id);
 		if(res>0) {
